@@ -1,11 +1,15 @@
 # Human Readable Bytes
 Convert bytes to a readable format (GB, MB, etc.)
 
+## Installation
+
+* `npm install human-readable-bytes --save`; or
+
+* `yarn add human-readable-bytes`.
+
 ## Usage
 
 ```jsx
-yarn add human-readable-bytes
-
 import convertBytesToHumanReadable from 'human-readable-bytes'
 
 convertBytesToHumanReadable(bytes, method, decimals, space)
