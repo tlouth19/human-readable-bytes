@@ -6,8 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
-    "transpile": "babel src -d dist --copy-files"
+    "transpile": "babel src -d dist --copy-files",
+    "prepublishOnly": "npm run transpile"
   },
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/tlouth19/human-readable-bytes"
+  },
+  "keywords": [
+  	"file size",
+  	"bytes"
+  ],
   "author": "Tyson Louth",
   "license": "MIT",
   "devDependencies": {

@@ -4,6 +4,8 @@ Convert bytes to a readable format (GB, MB, etc.)
 ## Usage
 
 ```jsx
+yarn add human-readable-bytes
+
 import convertBytesToHumanReadable from 'human-readable-bytes'
 
 convertBytesToHumanReadable(bytes, method, decimals, space)
