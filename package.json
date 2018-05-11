@@ -1,6 +1,6 @@
 {
   "name": "human-readable-bytes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert bytes to a readable format (GB, MB, etc.)",
   "main": "dist/index.js",
   "scripts": {
@@ -9,13 +9,13 @@
     "transpile": "babel src -d dist --copy-files",
     "prepublishOnly": "npm run transpile"
   },
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/tlouth19/human-readable-bytes"
   },
   "keywords": [
-  	"file size",
-  	"bytes"
+    "file size",
+    "bytes"
   ],
   "author": "Tyson Louth",
   "license": "MIT",
