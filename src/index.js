@@ -8,10 +8,10 @@ const convertBytesToHumanReadable = (bytes, method, decimalPlaces, space = false
 		}
 
 		if(Math.abs(size) < threshold) {
-				return size + 'b';
+				return `${size}${space ? ' ' : ''}B`;
 		}
 		const units = {
-			1000: ['kB','MB','GB','TB','PB','EB','ZB','YB'],
+			1000: ['KB','MB','GB','TB','PB','EB','ZB','YB'],
 			1024: ['KiB','MiB','GiB','TiB','PiB','EiB','ZiB','YiB']
 		}
 
