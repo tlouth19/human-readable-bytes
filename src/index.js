@@ -19,7 +19,7 @@ const convertBytesToHumanReadable = (bytes, method, decimalPlaces, space = false
 		do {
 				size /= threshold;
 				++u;
-		} while(Math.abs(size) >= threshold && u < units.length - 1);
+		} while(Math.abs(size) >= threshold && u < units[threshold].length - 1);
 		
 		return `${size.toFixed(decimalPlaces || 0)}${space ? ' ' : ''}${units[threshold][u]}`
 }
