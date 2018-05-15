@@ -15,10 +15,10 @@ var convertBytesToHumanReadable = function convertBytesToHumanReadable(bytes, me
 		}
 
 		if (Math.abs(size) < threshold) {
-				return size + 'b';
+				return '' + size + (space ? ' ' : '') + 'B';
 		}
 		var units = {
-				1000: ['kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
+				1000: ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
 				1024: ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB']
 		};
 
@@ -26,7 +26,7 @@ var convertBytesToHumanReadable = function convertBytesToHumanReadable(bytes, me
 		do {
 				size /= threshold;
 				++u;
-		} while (Math.abs(size) >= threshold && u < units.length - 1);
+		} while (Math.abs(size) >= threshold && u < units[threshold].length - 1);
 
 		return '' + size.toFixed(decimalPlaces || 0) + (space ? ' ' : '') + units[threshold][u];
 };
