@@ -1,5 +1,5 @@
 const convertBytesToHumanReadable = (bytes, method, decimalPlaces, space = false) => {
-		
+
 		const threshold = parseFloat(method)
 		let size = parseFloat(bytes)
 
@@ -10,18 +10,15 @@ const convertBytesToHumanReadable = (bytes, method, decimalPlaces, space = false
 		if(Math.abs(size) < threshold) {
 				return `${size}${space ? ' ' : ''}B`;
 		}
-		const units = {
-			1000: ['KB','MB','GB','TB','PB','EB','ZB','YB'],
-			1024: ['KiB','MiB','GiB','TiB','PiB','EiB','ZiB','YiB']
-		}
+		const units = ['KB','MB','GB','TB','PB','EB','ZB','YB']
 
 		let u = -1;
 		do {
 				size /= threshold;
 				++u;
-		} while(Math.abs(size) >= threshold && u < units[threshold].length - 1);
-		
-		return `${size.toFixed(decimalPlaces || 0)}${space ? ' ' : ''}${units[threshold][u]}`
+		} while(Math.abs(size) >= threshold && u < units.length - 1);
+
+		return `${size.toFixed(decimalPlaces || 0)}${space ? ' ' : ''}${units[u]}`
 }
 
 export default convertBytesToHumanReadable
